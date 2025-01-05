@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "battmon"
+version = "0.1.0"
+description = "Monitors the battery percentage on Mac OS and notifies if the charger should be connected or disconnected."
+authors = ["eoea <eoea754@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+psutil = "^6.1.1"
+macos-notifications = "^0.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+battmon = "battmon.main:main"
